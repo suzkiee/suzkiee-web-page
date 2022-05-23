@@ -1,4 +1,4 @@
-package main
+package render
 
 import (
 	"fmt"
@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// RenderTemplate renders a template with html templates
 func RenderTemplate(w http.ResponseWriter, tmpl string) {
 
 	parsedTemplate, _ := template.ParseFiles("./templates/" + tmpl)
